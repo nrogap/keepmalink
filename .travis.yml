@@ -7,3 +7,8 @@ cache:
 script:
   - npm test #Runs Tests
   - npm run build #Creats a production build
+deploy:
+  provider: firebase
+  token:
+    secure: $firebase_token
+ # project: "my-line-today"
