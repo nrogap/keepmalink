@@ -12,6 +12,7 @@ class App extends Component {
         </header>
         <p className="App-intro">
           When you meet the challenge things, just say <code>Try me! If you can</code>
+          test! if you can see it, fail
         </p>
       </div>
     );
