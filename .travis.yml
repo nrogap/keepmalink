@@ -1,24 +1,24 @@
 language: node_js
 node_js:
-  - "node"
-cache:
-  directories:
-    - node_modules
+  - "8"
+# cache:
+#   directories:
+#     - node_modules
 branches:
   only: 
     - master 
 script:
   - npm test
   - npm run build
-install:
-  npm install -g firebase-tools
-after_success:
-    - firebase deploy
+before_deploy:
+  - npm install -g firebase-tools
+  - echo 'xxxxxxxxxxxxxxxxxxxx'
 deploy:
   provider: firebase
+  skip_cleanup: true
   token:
     secure: "ey5cdPsJe7yObuniotWFMV5mugrfVqWDm4O7sJAAA4bSzUJYJ8QnA22CLSeZTu00dNLWncxvAAuI8bxlHAEHdbOvSGU0gZ8VSuPWFKwwnnjyvQS/NU2vInojT5DxJr8pUgQKwnMtsdSmNFbhD0BDJj0kyMsX6nb6HlHQnaUgyU1fiAuS+q54kpk/BcB0ilzwjEejZ7yav1rboivMfl3oib9Y0fDJUdDAzyxOCWSIAC0kUs1boZCUIdLQ5s+tdy7KERadeEIUgpfxhwsgWncLN6wp/O7iWAWtKJvw/RqZ2LQ09wQZLZHjZaONZqeBW2fG2PMOZo/DH4KUVJsezjNM2VsIBnG23sa3pOZ/mS3VCbybMqNEHXC4u5nvjHr/toAASxiPsvo2paIg2reRrPzMOU90YcoFaaDwuV5T36nKxW0npq1C2QdeTvAXZCnQKA9RyZr5rmDlQJWKQvrbtjssMm6t5LaPJmj9Oh5WaPr+srqTOSL+jkeUJPQ5UO7O8kzCTteUhCdwCquGHEoc8GRWnM18tWP6adsdWrZzXu3hTiQ0kryf48UJHQcfgqdMYIeV+At6Q3SVOTsSnK3ZLpe76Bt4u7wFi7jb8jbg6dDTqigEF6rIUs1mFW65uDr5IJE0+xcyji29E+8USCLc1mZda3A3EAiHYgGW4UfNx0Gs5XU="
-  project: "my-line-today"
+  project: my-line-today
 env:
   global:
     secure: ey5cdPsJe7yObuniotWFMV5mugrfVqWDm4O7sJAAA4bSzUJYJ8QnA22CLSeZTu00dNLWncxvAAuI8bxlHAEHdbOvSGU0gZ8VSuPWFKwwnnjyvQS/NU2vInojT5DxJr8pUgQKwnMtsdSmNFbhD0BDJj0kyMsX6nb6HlHQnaUgyU1fiAuS+q54kpk/BcB0ilzwjEejZ7yav1rboivMfl3oib9Y0fDJUdDAzyxOCWSIAC0kUs1boZCUIdLQ5s+tdy7KERadeEIUgpfxhwsgWncLN6wp/O7iWAWtKJvw/RqZ2LQ09wQZLZHjZaONZqeBW2fG2PMOZo/DH4KUVJsezjNM2VsIBnG23sa3pOZ/mS3VCbybMqNEHXC4u5nvjHr/toAASxiPsvo2paIg2reRrPzMOU90YcoFaaDwuV5T36nKxW0npq1C2QdeTvAXZCnQKA9RyZr5rmDlQJWKQvrbtjssMm6t5LaPJmj9Oh5WaPr+srqTOSL+jkeUJPQ5UO7O8kzCTteUhCdwCquGHEoc8GRWnM18tWP6adsdWrZzXu3hTiQ0kryf48UJHQcfgqdMYIeV+At6Q3SVOTsSnK3ZLpe76Bt4u7wFi7jb8jbg6dDTqigEF6rIUs1mFW65uDr5IJE0+xcyji29E+8USCLc1mZda3A3EAiHYgGW4UfNx0Gs5XU=
