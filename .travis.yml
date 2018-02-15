@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "stable"
+  - "node"
 cache:
   directories:
   - node_modules #Cache node_modules for faster builds
@@ -11,4 +11,4 @@ deploy:
   provider: firebase
   token:
     secure: $firebase_token
- # project: "my-line-today"
+  project: "my-line-today"
