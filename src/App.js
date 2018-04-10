@@ -12,7 +12,7 @@ class App extends Component {
         </header>
         <p className="App-intro">
           When you meet the challenge things, just say <code>Try me! If you can</code>
-          test! when remove double quote in .travis.yml ejfe9r9j
+          test! when remove double quote in 
         </p>
       </div>
     );
