@@ -11,8 +11,8 @@ class App extends Component {
           <h1 className="App-title">Welcome to My Line Today!</h1>
         </header>
         <p className="App-intro">
-          When you meet the challenge things, just say <code>Try me! If you can</code>
-          test! when remove double quote in 
+          xcxcxcWhen you meet the challenge things, just say <code>Try me! If you can</code>
+          test! when remove double quote in xxxxxxxxxxxxxxxxxxxxx
         </p>
       </div>
     );
