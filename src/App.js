@@ -8,7 +8,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to My Line Today!</h1>
+          <h1 className="App-title">Welcome to Keep Ma Link</h1>
         </header>
         <p className="App-intro">
           xcxcxcWhen you meet the challenge things, just say <code>Try me! If you can</code>
