@@ -1,0 +1,11 @@
+{
+    "editor.fontSize": 16,
+    "git.autofetch": true,
+    "editor.minimap.enabled": false,
+
+    "files.trimTrailingWhitespace": true,
+
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false
+}
