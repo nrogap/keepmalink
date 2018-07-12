@@ -1,19 +1,19 @@
 import React from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { Route } from 'react-router-dom'
+
+const HomePage = () => <h1>Home</h1>
+const AboutPage = () => <h1>About</h1>
+const PostPage = () => <h1>Post</h1>
+const ProjectPage = () => <h1>Project</h1>
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to Keep Ma Link</h1>
-        </header>
-        <p className="App-intro">
-          xcxcxcWhen you meet the challenge things, just say <code>Try me! If you can</code>
-          test! when remove double quote in xxxxxxxxxxxxxxxxxxxxx
-        </p>
+        <Route path="/" component={HomePage} />
+        <Route path="/about" component={AboutPage} />
+        <Route path="/posts" component={PostPage} />
+        <Route path="/projects" component={ProjectPage} />
       </div>
     )
   }
