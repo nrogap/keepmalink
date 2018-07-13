@@ -1,13 +1,12 @@
 import React from 'react'
 import { Route, NavLink } from 'react-router-dom'
 
-import 'bulma/css/bulma.css'
+import HomePage from './components/HomePage'
+import AboutPage from './components/AboutPage'
+import PostPage from './components/PostPage'
+import ProjectPage from './components/ProjectPage'
 
-const HomePage = () => <h1>Home</h1>
-const AboutPage = () => <h1>About</h1>
-const PostPage = () => <h1>Post</h1>
-const ProjectPage = () => <h1>Project</h1>
-const NotFoundPage = () => <h1>404: Not found</h1>
+import 'bulma/css/bulma.css'
 
 class App extends React.Component {
   render() {
@@ -28,7 +27,7 @@ class App extends React.Component {
                 <NavLink to="/about" activeClassName="is-active" className="navbar-item">About</NavLink>
                 <a
                   className="navbar-item"
-                  href="https://github.com/phonbopit"
+                  href="https://github.com/nrogapp"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -41,8 +40,8 @@ class App extends React.Component {
         <div className="App container">
           <Route exact path="/" component={HomePage} />
           <Route path="/about" component={AboutPage} />
-          <Route path="/post" component={PostPage} />
-          <Route path="/project" component={ProjectPage} />
+          <Route path="/posts" component={PostPage} />
+          <Route path="/projects" component={ProjectPage} />
         </div>
       </div>
     )
