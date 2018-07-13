@@ -10,13 +10,15 @@ const NotFoundPage = () => <h1>404: Not found</h1>
 class App extends React.Component {
   render() {
     return (
-      <Switch>
-        <Route path="/" component={HomePage} />
-        <Route path="/about" component={AboutPage} />
-        <Route path="/posts" component={PostPage} />
-        <Route path="/projects" component={ProjectPage} />
-        <Route component={NotFoundPage} />
-      </Switch>
+      <div className="App container">
+        <Switch>
+          <Route path="/" component={HomePage} />
+          <Route path="/about" component={AboutPage} />
+          <Route path="/posts" component={PostPage} />
+          <Route path="/projects" component={ProjectPage} />
+          <Route component={NotFoundPage} />
+        </Switch>
+      </div>
     )
   }
 }
