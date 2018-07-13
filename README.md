@@ -1,4 +1,4 @@
-# [Keepmalink](https://keepmalink.firebase.com) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nrogapp/keepmalink/blob/master/LICENSE)
+# [Keepmalink](https://keepmalink.firebase.com) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nrogapp/keepmalink/blob/master/LICENSE) [![Travis-CI Status](https://travis-ci.org/nrogapp/keepmalink.svg?branch=master)](https://travis-ci.org/nrogapp/keepmalink)
 
 Keepmalink is a web keeper of your favourite links.
 
@@ -13,15 +13,16 @@ npm start
 # Architecture Overview
 
 ## Frontend
-- [React](https://facebook.github.io/react/): UI
-- [React-Router](https://github.com/ReactTraining/react-router): Navigation
-- [Bulma](https://github.com/jgthms/bulma): CSS framework
+- [React](https://facebook.github.io/react/) - UI
+- [React-Router](https://github.com/ReactTraining/react-router) - Navigation
+- [Bulma](https://github.com/jgthms/bulma) - CSS framework
 
 ## Backend
 - [Firebase](https://firebase.google.com/)
 
 ## CI/CD
-- [Travis CI](https://travis-ci.org/)
+- [Travis CI](https://travis-ci.org/) - Not allow us to deploy on `Push Request`
+- [Circle CI](https://circleci.com/) - Next time we will try it
 
 
 # Tools & Extension
