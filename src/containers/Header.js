@@ -2,12 +2,8 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 class Header extends React.Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      isActive: false
-    }
+  state = {
+    isActive: false
   }
 
   toggleNav = () => {
@@ -19,11 +15,11 @@ class Header extends React.Component {
   render() {
     return (
       <div className="Header">
-        <nav className="navbar is-white is-fixed-top">
+        <nav className="navbar has-shadow is-fixed-top">
           <div className="container">
             <div className="navbar-brand">
               <a className="navbar-item" href="/">
-                <b>K</b>eepMaLink
+                <strong>K</strong>eepMaLink
               </a>
               <div
                 className="navbar-burger burger"
@@ -35,8 +31,8 @@ class Header extends React.Component {
               </div>
             </div>
             <div
-              id="mainNav"
               className={this.state.isActive ? 'navbar-menu is-active' : 'navbar-menu'}
+              id="mainNav"
             >
               <div className="navbar-end">
                 <NavLink exact to="/" activeClassName="is-active" className="navbar-item">Home</NavLink>

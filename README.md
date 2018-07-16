@@ -35,6 +35,9 @@ npm start
 
 # Knowledge Source
 
+## Concept
+- [Presentational and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)
+
 ## Setup Project
 - [Using React in VS Code](https://code.visualstudio.com/docs/nodejs/reactjs-tutorial)
 - [มาลอง deploy create-react-app ขึ้น Firebase hosting และทำ CI/CD ด้วย Travis-ci กันเถอะ](https://medium.com/muze-innovation/%E0%B8%A1%E0%B8%B2%E0%B8%A5%E0%B8%AD%E0%B8%87-deploy-create-react-app-%E0%B8%82%E0%B8%B6%E0%B9%89%E0%B8%99-firebase-hosting-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%97%E0%B8%B3-ci-cd-%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2-travis-ci-%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%96%E0%B8%AD%E0%B8%B0-7a010a2005ed)
@@ -42,7 +45,6 @@ npm start
 
 ## Core
 - [ทำ Routing ให้กับ React ด้วย React Router v4](https://devahoy.com/posts/basic-web-with-react-router-v4/) (+ Setup ESLint and Bulma)
-- [Getting started with create-react-app, Redux, React Router & Redux Thunk](https://medium.com/@notrab/getting-started-with-create-react-app-redux-react-router-redux-thunk-d6a19259f71f)
 
 ## CSS
 - [4. Four ways to style react components](https://codeburst.io/4-four-ways-to-style-react-components-ac6f323da822)
