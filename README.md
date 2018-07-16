@@ -41,11 +41,12 @@ npm start
 - [ทำโค้ดให้สวย และเป็นมาตรฐานด้วย ESlint และ Prettier](https://medium.com/@boomauakim/%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B9%82%E0%B8%9B%E0%B8%A3%E0%B9%80%E0%B8%88%E0%B9%87%E0%B8%84%E0%B9%80%E0%B8%A3%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%95%E0%B9%89%E0%B8%99%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%87%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B9%86-%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2-koa-node-js-framework-eslint-and-prettier-b3ed866e826)
 
 ## Core
-- [ทำ Routing ให้กับ React ด้วย React Router v4](https://devahoy.com/posts/basic-web-with-react-router-v4/) (+ Setup ESLint and Prettier)
+- [ทำ Routing ให้กับ React ด้วย React Router v4](https://devahoy.com/posts/basic-web-with-react-router-v4/) (+ Setup ESLint and Bulma)
 - [Getting started with create-react-app, Redux, React Router & Redux Thunk](https://medium.com/@notrab/getting-started-with-create-react-app-redux-react-router-redux-thunk-d6a19259f71f)
 
 ## CSS
 - [4. Four ways to style react components](https://codeburst.io/4-four-ways-to-style-react-components-ac6f323da822)
+- [Building a website with React and Bulma](https://hackernoon.com/building-a-website-with-react-and-bulma-d655214bff2a)
 
 
 # License
