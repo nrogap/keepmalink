@@ -16,6 +16,7 @@ npm start
 - [React](https://facebook.github.io/react/) - UI
 - [React-Router](https://github.com/ReactTraining/react-router) - Navigation
 - [Bulma](https://github.com/jgthms/bulma) - CSS framework
+- [Fort Awesome](https://github.com/FortAwesome/Font-Awesome) - Iconic SVG
 
 ## Backend
 - [Firebase](https://firebase.google.com/)
@@ -31,7 +32,7 @@ npm start
 - [Dracula Theme](https://draculatheme.com/)
 - [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-
+- [RegExr](https://regexr.com/)
 
 # Knowledge Source
 

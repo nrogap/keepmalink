@@ -5,9 +5,8 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 
 import HomePage from './containers/HomePage'
-import AboutPage from './containers/AboutPage'
-import PostPage from './containers/PostPage'
-import ProjectPage from './containers/ProjectPage'
+import SignupPage from './containers/SignupPage'
+import SigninPage from './containers/SigninPage'
 
 class App extends React.Component {
   render() {
@@ -17,9 +16,8 @@ class App extends React.Component {
         <div className="container">
           <Switch>
             <Route exact path="/" component={HomePage} />
-            <Route path="/about" component={AboutPage} />
-            <Route path="/posts" component={PostPage} />
-            <Route path="/projects" component={ProjectPage} />
+            <Route path="/signin" component={SigninPage} />
+            <Route path="/signup" component={SignupPage} />
           </Switch>
         </div>
         <Footer />
