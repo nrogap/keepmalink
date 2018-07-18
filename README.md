@@ -56,6 +56,11 @@ npm start
 - [4. Four ways to style react components](https://codeburst.io/4-four-ways-to-style-react-components-ac6f323da822)
 - [Building a website with React and Bulma](https://hackernoon.com/building-a-website-with-react-and-bulma-d655214bff2a)
 
+### Note
+
+## 2018-07-18 Solved `bad decrypt` file by openssl
+- If you are using Windows, don't try to use `travis encrypt-file` in `CMD` or `Powershell`. You must use `WSL` instead. [more detail](https://github.com/travis-ci/travis-ci/issues/4746)
+- We think the problem is about version of `openssl` mismatch or the `end-of-line` problem in different OS?
 
 # License
 
