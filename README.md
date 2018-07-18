@@ -16,6 +16,7 @@ npm start
 - [React](https://facebook.github.io/react/) - UI
 - [React-Router](https://github.com/ReactTraining/react-router) - Navigation
 - [Bulma](https://github.com/jgthms/bulma) - CSS framework
+- [Fort Awesome](https://github.com/FortAwesome/Font-Awesome) - Iconic SVG
 
 ## Backend
 - [Firebase](https://firebase.google.com/)
@@ -31,7 +32,7 @@ npm start
 - [Dracula Theme](https://draculatheme.com/)
 - [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-
+- [RegExr](https://regexr.com/)
 
 # Knowledge Source
 
@@ -43,8 +44,13 @@ npm start
 - [มาลอง deploy create-react-app ขึ้น Firebase hosting และทำ CI/CD ด้วย Travis-ci กันเถอะ](https://medium.com/muze-innovation/%E0%B8%A1%E0%B8%B2%E0%B8%A5%E0%B8%AD%E0%B8%87-deploy-create-react-app-%E0%B8%82%E0%B8%B6%E0%B9%89%E0%B8%99-firebase-hosting-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%97%E0%B8%B3-ci-cd-%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2-travis-ci-%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%96%E0%B8%AD%E0%B8%B0-7a010a2005ed)
 - [ทำโค้ดให้สวย และเป็นมาตรฐานด้วย ESlint และ Prettier](https://medium.com/@boomauakim/%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B9%82%E0%B8%9B%E0%B8%A3%E0%B9%80%E0%B8%88%E0%B9%87%E0%B8%84%E0%B9%80%E0%B8%A3%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%95%E0%B9%89%E0%B8%99%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%87%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B9%86-%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2-koa-node-js-framework-eslint-and-prettier-b3ed866e826)
 
-## Core
+## Route
 - [ทำ Routing ให้กับ React ด้วย React Router v4](https://devahoy.com/posts/basic-web-with-react-router-v4/) (+ Setup ESLint and Bulma)
+
+## Firebase
+- [Integrating Firebase Authentication with the new React Context API](https://hackernoon.com/integrating-firebase-authentication-with-react-router-in-react-16-3-92f53b67c0b0)
+- [Intro to Firebase and React](https://css-tricks.com/intro-firebase-react/)
+- [Firebase & React Part 2: User Authentication](https://css-tricks.com/firebase-react-part-2-user-authentication/)
 
 ## CSS
 - [4. Four ways to style react components](https://codeburst.io/4-four-ways-to-style-react-components-ac6f323da822)

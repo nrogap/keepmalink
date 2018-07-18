@@ -14,7 +14,7 @@ class Header extends React.Component {
 
   render() {
     return (
-      <div className="Header">
+      <div className="header">
         <nav className="navbar has-shadow is-fixed-top">
           <div className="container">
             <div className="navbar-brand">
@@ -35,18 +35,20 @@ class Header extends React.Component {
               id="mainNav"
             >
               <div className="navbar-end">
-                <NavLink exact to="/" activeClassName="is-active" className="navbar-item">Home</NavLink>
-                <NavLink to="/posts" activeClassName="is-active" className="navbar-item">Posts</NavLink>
-                <NavLink to="/projects" activeClassName="is-active" className="navbar-item">Projects</NavLink>
-                <NavLink to="/about" activeClassName="is-active" className="navbar-item">About</NavLink>
-                <a
-                  className="navbar-item"
-                  href="https://github.com/nrogapp"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Star on <i className="fab fa-github"></i>
-                </a>
+                <div className="navbar-item">
+                  <div className="field is-grouped">
+                    <p className="control">
+                      <NavLink to="/signin" activeClassName="is-active" className="navbar-item">
+                        Sign In
+                      </NavLink>
+                    </p>
+                    <p className="control">
+                      <NavLink to="/signup" className="button is-info is-outlined is-hovered">
+                        Sign up
+                      </NavLink>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
