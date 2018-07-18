@@ -55,8 +55,6 @@ class SignupPage extends React.Component {
       nameMessage,
       passwordMessage,
       confirmPasswordMessage
-    }, () => {
-      console.log('state: ', this.state)
     })
   }
 
@@ -74,9 +72,6 @@ class SignupPage extends React.Component {
       passwordMessage,
       confirmPasswordMessage
     } = this.state
-
-    console.log('process_pagorn: ', process.env.PAGORN_TOKEN)
-    console.log(process.env.REACT_APP_TEST_VAR)
 
     return (
       <div className="SignupPage">
