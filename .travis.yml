@@ -17,3 +17,7 @@ deploy:
   skip_cleanup: true
   token: $FIREBASE_TOKEN
   project: $PROJECT_ID
+env:
+  global:
+    - CAMPFIRE_TOKEN=abc123
+    - TIMEOUT=1000
