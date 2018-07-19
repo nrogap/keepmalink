@@ -1,5 +1,14 @@
 import React from 'react'
 
+import { auth, provider } from '../firebase/firebase'
+
+import {
+  validateEmail,
+  validateName,
+  validatePassword,
+  validateConfirmPassword
+} from '../helpers/validator'
+
 class SignupPage extends React.Component {
   state = {
     email: '',
@@ -9,7 +18,35 @@ class SignupPage extends React.Component {
     emailMessage: null,
     nameMessage: null,
     passwordMessage: null,
-    confirmPasswordMessage: null
+    confirmPasswordMessage: null,
+    user: null
+  }
+
+  componentDidMount() {
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({ user })
+      }
+    })
+  }
+
+  login = () => {
+    auth.signInWithPopup(provider)
+      .then((result) => {
+        const user = result.user
+        this.setState({
+          user
+        })
+      })
+  }
+
+  logout = () => {
+    auth.signOut()
+      .then(() => {
+        this.setState({
+          user: null
+        })
+      })
   }
 
   handleChange = (event) => {
@@ -28,40 +65,17 @@ class SignupPage extends React.Component {
       password,
       confirmPassword
     } = this.state
-    const regexEmail = /^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})/
-    let emailMessage = null
-    if (!email.match(regexEmail)) {
-      emailMessage = 'Please enter a valid email address'
-    }
-
-    const regexName = /[A-z0-9 ]{3,50}$/
-    let nameMessage = null
-    if (!name.match(regexName)) {
-      nameMessage = 'Can only contain letters and numbers'
-    }
-
-    let passwordMessage = null
-    if (password.length < 8) {
-      passwordMessage = 'Use 8 characters or mores'
-    }
-
-    let confirmPasswordMessage = null
-    if (confirmPassword !== password) {
-      confirmPasswordMessage = 'does not match the password'
-    }
 
     this.setState({
-      emailMessage,
-      nameMessage,
-      passwordMessage,
-      confirmPasswordMessage
+      emailMessage: validateEmail(email),
+      nameMessage: validateName(name),
+      passwordMessage: validatePassword(password),
+      confirmPasswordMessage: validateConfirmPassword(password, confirmPassword)
     })
   }
 
-  // length is 3-50 characters
   handleSubmit = (event) => {
     event.preventDefault()
-
     this.validate()
   }
 
@@ -75,6 +89,13 @@ class SignupPage extends React.Component {
 
     return (
       <div className="SignupPage">
+        <div className="google-sigin">
+          <h1>Fun Food Friends</h1>
+          {this.state.user
+            ? <button onClick={this.logout}>Log Out</button>
+            : <button onClick={this.login}>Log In</button>
+          }
+        </div>
         <form onSubmit={this.handleSubmit}>
           <div className="field">
             <label className="label">Email</label>
