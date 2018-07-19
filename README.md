@@ -38,6 +38,7 @@ npm start
 
 ## React
 - [Presentational and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)
+- [React’s Component Lifecycle](https://itnext.io/reacts-component-lifecycle-6c13e09d10ad)
 
 ## Setup Project
 - [Using React in VS Code](https://code.visualstudio.com/docs/nodejs/reactjs-tutorial)
@@ -52,6 +53,7 @@ npm start
 - [ทำ Routing ให้กับ React ด้วย React Router v4](https://devahoy.com/posts/basic-web-with-react-router-v4/) (+ Setup ESLint and Bulma)
 
 ## Firebase
+- [Firebase & React Part 2: User Authentication](https://css-tricks.com/firebase-react-part-2-user-authentication/)
 - [A Complete Firebase in React Authentication Tutorial [2018]](https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial/)
 
 ## Travis
