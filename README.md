@@ -73,7 +73,8 @@ npm start
 
 ## 2018-07-19 Can't stop someone to view the source code
 - We use `travis encrypt-file` to encrypt `firebase config`. But we can see the `firebase config` when it was decrypted on `Inspect > Source`
-- We research about the security of this case and the refs is in [Knowledge > Security Section](#security)
+- We decide to place `firebase config` to encrypted `.env`
+- The research these case is in [Knowledge > Security](#security) Section
 
 
 # License
