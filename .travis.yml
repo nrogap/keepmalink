@@ -18,5 +18,4 @@ deploy:
   token: $FIREBASE_TOKEN
   project: $PROJECT_ID
 before_install:
-- openssl aes-256-cbc -K $encrypted_93683e4cab8e_key -iv $encrypted_93683e4cab8e_iv -in firebaseConfig2.js.enc -out ./src/firebase/firebaseConfig2.js -d
 - openssl aes-256-cbc -K $encrypted_93683e4cab8e_key -iv $encrypted_93683e4cab8e_iv -in .env.enc -out .env -d
