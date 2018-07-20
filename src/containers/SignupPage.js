@@ -5,9 +5,17 @@ import { auth, provider } from '../firebase'
 import SignUpForm from '../components/SignUpForm'
 
 class SignUpPage extends React.Component {
-  state = {
-    user: null
+  constructor(props) {
+    super(props)
+
+    this.INITIAL_STATE = {
+      user: null,
+      errorSignIn: null
+    }
+
+    this.state = { ...this.INITIAL_STATE }
   }
+
   componentDidMount() {
     auth.onAuthStateChanged((user) => {
       if (user) {
@@ -35,6 +43,16 @@ class SignUpPage extends React.Component {
       })
   }
 
+  onSubmit = (data) => {
+    auth.createUserWithEmailAndPassword(data.email, data.password)
+      .then(authUser => {
+        this.setState({...this.INITIAL_STATE})
+      })
+      .catch(error => {
+        this.setState({errorSignIn: error})
+      })
+  }
+
   render() {
     return (
       <div className="SignUpPage">
@@ -45,7 +63,7 @@ class SignUpPage extends React.Component {
             : <button onClick={this.login}>Log In</button>
           }
         </div>
-        <SignUpForm />
+        <SignUpForm onSubmit={this.onSubmit}/>
       </div>
     )
   }

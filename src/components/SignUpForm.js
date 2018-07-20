@@ -56,7 +56,17 @@ class SignUpForm extends React.Component {
     event.preventDefault()
 
     if (this.isValid()) {
-      console.log('Do register')
+      const {
+        email,
+        name,
+        password
+      } = this.state
+
+      this.props.onSubmit({
+        email,
+        name,
+        password
+      })
     }
   }
 
@@ -96,7 +106,7 @@ class SignUpForm extends React.Component {
           </div>
 
           <div className="field">
-            <label className="label">Name</label>
+            <label className="label">Display Name</label>
             <div className="control has-icons-left has-icons-right">
               <input
                 className={`input ${nameMessage ? 'is-danger' : ''}`}
