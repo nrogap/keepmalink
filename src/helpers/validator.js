@@ -41,7 +41,7 @@ export function validateName(value) {
 export function validatePassword(value) {
   const messages = []
 
-  if (value < 8) {
+  if (value.length < 8) {
     messages.push('Use 8 characters or mores')
   }
 
