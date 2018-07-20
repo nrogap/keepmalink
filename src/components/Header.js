@@ -1,6 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
+import { auth } from '../firebase'
+
 import * as routes from '../constants/routes'
 
 class Header extends React.Component {
@@ -12,6 +14,10 @@ class Header extends React.Component {
     this.setState(prevState => ({
       isActive: !prevState.isActive
     }))
+  }
+
+  handleSignOut = () => {
+    auth.signOut()
   }
 
   render() {
@@ -37,13 +43,9 @@ class Header extends React.Component {
               id="mainNav"
             >
               <div className="navbar-end">
-                <div className="navbar-item">
-                  <NavLink exact to={routes.LANDING} activeClassName="is-active" className="navbar-item">Landing</NavLink>
-                  <NavLink to={routes.HOME} activeClassName="is-active" className="navbar-item">Home</NavLink>
-                  <NavLink to={routes.ACCOUNT} activeClassName="is-active" className="navbar-item">Account</NavLink>
-                  <NavLink to="/signin" activeClassName="is-active" className="navbar-item">Sign In</NavLink>
-                  <NavLink to="/signup" className="button is-info is-outlined is-hovered">Sign up</NavLink>
-                </div>
+                {this.props.authUser
+                  ? <NavBarEndAuth />
+                  : <NavBarEndNonAuth />}
               </div>
             </div>
           </div>
@@ -52,5 +54,20 @@ class Header extends React.Component {
     )
   }
 }
+
+const NavBarEndNonAuth = () =>
+  <div className="navbar-item">
+    <NavLink exact to={routes.LANDING} activeClassName="is-active" className="navbar-item">Landing</NavLink>
+    <NavLink to="/signin" activeClassName="is-active" className="navbar-item">Sign In</NavLink>
+    <NavLink to="/signup" className="button is-info is-outlined is-hovered">Sign up</NavLink>
+  </div>
+
+const NavBarEndAuth = () =>
+  <div className="navbar-item">
+    <NavLink exact to={routes.LANDING} activeClassName="is-active" className="navbar-item">Landing</NavLink>
+    <NavLink to={routes.HOME} activeClassName="is-active" className="navbar-item">Home</NavLink>
+    <NavLink to={routes.ACCOUNT} activeClassName="is-active" className="navbar-item">Account</NavLink>
+    <button type="button" className="button is-danger is-outlined is-hovered" onClick={this.handleSignOut}>Sign Out</button>
+  </div>
 
 export default Header
