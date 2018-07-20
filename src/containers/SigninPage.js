@@ -1,9 +1,9 @@
 import React from 'react'
 
-class SigninPage extends React.Component {
+class SignInPage extends React.Component {
   render() {
-    return (<div>SigninPage</div>)
+    return (<div>SignInPage</div>)
   }
 }
 
-export default SigninPage
+export default SignInPage

@@ -9,7 +9,7 @@ import {
   validateConfirmPassword
 } from '../helpers/validator'
 
-class SignupPage extends React.Component {
+class SignUpPage extends React.Component {
   state = {
     email: '',
     name: '',
@@ -88,7 +88,7 @@ class SignupPage extends React.Component {
     } = this.state
 
     return (
-      <div className="SignupPage">
+      <div className="SignUpPage">
         <div className="google-sigin">
           <h1>Fun Food Friends</h1>
           {this.state.user
@@ -184,4 +184,4 @@ class SignupPage extends React.Component {
   }
 }
 
-export default SignupPage
+export default SignUpPage

@@ -1,6 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
+import * as routes from '../constants/routes'
+
 class Header extends React.Component {
   state = {
     isActive: false
@@ -36,24 +38,17 @@ class Header extends React.Component {
             >
               <div className="navbar-end">
                 <div className="navbar-item">
-                  <div className="field is-grouped">
-                    <p className="control">
-                      <NavLink to="/signin" activeClassName="is-active" className="navbar-item">
-                        Sign In
-                      </NavLink>
-                    </p>
-                    <p className="control">
-                      <NavLink to="/signup" className="button is-info is-outlined is-hovered">
-                        Sign up
-                      </NavLink>
-                    </p>
-                  </div>
+                  <NavLink exact to={routes.LANDING} activeClassName="is-active" className="navbar-item">Landing</NavLink>
+                  <NavLink to={routes.HOME} activeClassName="is-active" className="navbar-item">Home</NavLink>
+                  <NavLink to={routes.ACCOUNT} activeClassName="is-active" className="navbar-item">Account</NavLink>
+                  <NavLink to="/signin" activeClassName="is-active" className="navbar-item">Sign In</NavLink>
+                  <NavLink to="/signup" className="button is-info is-outlined is-hovered">Sign up</NavLink>
                 </div>
               </div>
             </div>
           </div>
         </nav>
-      </div>
+      </div >
     )
   }
 }
