@@ -3,7 +3,7 @@ import React from 'react'
 import {
   validateEmail,
   validateName,
-  validatePassword,
+  validatePasswordSignUp,
   validateConfirmPassword
 } from '../helpers/validator'
 
@@ -16,8 +16,7 @@ class SignUpForm extends React.Component {
     emailMessage: null,
     nameMessage: null,
     passwordMessage: null,
-    confirmPasswordMessage: null,
-    user: null
+    confirmPasswordMessage: null
   }
 
   handleChange = (event) => {
@@ -39,7 +38,7 @@ class SignUpForm extends React.Component {
 
     const emailMessage = validateEmail(email)
     const nameMessage = validateName(name)
-    const passwordMessage = validatePassword(password)
+    const passwordMessage = validatePasswordSignUp(password)
     const confirmPasswordMessage = validateConfirmPassword(password, confirmPassword)
 
     this.setState({
@@ -83,7 +82,7 @@ class SignUpForm extends React.Component {
     } = this.state
 
     return (
-      <div className="SignUpPage">
+      <div className="SignUpForm">
         <form onSubmit={this.handleSubmit}>
           <div className="field">
             <label className="label">Email</label>
@@ -167,7 +166,7 @@ class SignUpForm extends React.Component {
 
           <div className="field is-grouped">
             <div className="control">
-              <button className="button is-link" type="submit">Submit</button>
+              <button className="button is-link" type="submit">Register</button>
             </div>
           </div>
         </form>

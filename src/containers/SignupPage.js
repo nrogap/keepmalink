@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { withRouter } from 'react-router-dom'
 import { auth, provider } from '../firebase'
 
@@ -52,6 +51,7 @@ class SignUpPage extends React.Component {
   render() {
     return (
       <div className="SignUpPage">
+        Sign Up
         <div className="google-sigin">
           <h1>Fun Food Friends</h1>
           {this.state.user

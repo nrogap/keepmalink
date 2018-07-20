@@ -4,11 +4,11 @@ export function validateEmail(value) {
   const messages = []
 
   if (!value.match(regex)) {
-    messages.push('Please enter a valid email address')
+    messages.push('Enter a valid email address')
   }
 
   if (value.length > 50) {
-    messages.push('The email addresss is too long')
+    messages.push('Email addresss is too long')
   }
 
   if (messages.length === 0) {
@@ -38,7 +38,21 @@ export function validateName(value) {
   }
 }
 
-export function validatePassword(value) {
+export function validatePasswordSignIn(value) {
+  const messages = []
+
+  if (value.length === 0) {
+    messages.push('Enter a Password')
+  }
+
+  if (messages.length === 0) {
+    return null
+  } else {
+    return messages.join('. ')
+  }
+}
+
+export function validatePasswordSignUp(value) {
   const messages = []
 
   if (value.length < 8) {
