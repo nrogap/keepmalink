@@ -40,7 +40,7 @@ class SignUpForm extends React.Component {
     const emailMessage = validateEmail(email)
     const nameMessage = validateName(name)
     const passwordMessage = validatePassword(password)
-    const confirmPasswordMessage = validateConfirmPassword(confirmPassword)
+    const confirmPasswordMessage = validateConfirmPassword(password, confirmPassword)
 
     this.setState({
       emailMessage,
@@ -65,7 +65,11 @@ class SignUpForm extends React.Component {
       emailMessage,
       nameMessage,
       passwordMessage,
-      confirmPasswordMessage
+      confirmPasswordMessage,
+      email,
+      name,
+      password,
+      confirmPassword
     } = this.state
 
     return (
@@ -79,6 +83,7 @@ class SignUpForm extends React.Component {
                 id="email"
                 type="email"
                 autoComplete="email"
+                value={email}
                 onChange={this.handleChange} />
               <span className="icon is-small is-left">
                 <i className="fas fa-envelope"></i>
@@ -98,6 +103,7 @@ class SignUpForm extends React.Component {
                 id="name"
                 type="text"
                 autoComplete="name"
+                value={name}
                 onChange={this.handleChange} />
               <span className="icon is-small is-left">
                 <i className="fas fa-user"></i>
@@ -117,6 +123,7 @@ class SignUpForm extends React.Component {
                 id="password"
                 type="password"
                 autoComplete="new-password"
+                value={password}
                 onChange={this.handleChange} />
               <span className="icon is-small is-left">
                 <i className="fas fa-key"></i>
@@ -136,6 +143,7 @@ class SignUpForm extends React.Component {
                 id="confirmPassword"
                 type="password"
                 autoComplete="new-password"
+                value={confirmPassword}
                 onChange={this.handleChange} />
               <span className="icon is-small is-left">
                 <i className="fas fa-key"></i>

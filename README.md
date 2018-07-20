@@ -39,6 +39,7 @@ npm start
 ## React
 - [Presentational and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)
 - [React’s Component Lifecycle](https://itnext.io/reacts-component-lifecycle-6c13e09d10ad)
+- [How to Work with Forms, Inputs and Events in React](https://medium.com/capital-one-developers/how-to-work-with-forms-inputs-and-events-in-react-c337171b923b)
 
 ## Setup Project
 - [Using React in VS Code](https://code.visualstudio.com/docs/nodejs/reactjs-tutorial)
