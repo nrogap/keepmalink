@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { auth, provider } from '../firebase/firebase'
+import { auth, provider } from '../firebase'
 
 import {
   validateEmail,
