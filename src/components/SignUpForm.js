@@ -29,7 +29,7 @@ class SignUpForm extends React.Component {
     })
   }
 
-  validate() {
+  isValid() {
     const {
       email,
       name,
@@ -37,17 +37,27 @@ class SignUpForm extends React.Component {
       confirmPassword
     } = this.state
 
+    const emailMessage = validateEmail(email)
+    const nameMessage = validateName(name)
+    const passwordMessage = validatePassword(password)
+    const confirmPasswordMessage = validateConfirmPassword(confirmPassword)
+
     this.setState({
-      emailMessage: validateEmail(email),
-      nameMessage: validateName(name),
-      passwordMessage: validatePassword(password),
-      confirmPasswordMessage: validateConfirmPassword(password, confirmPassword)
+      emailMessage,
+      nameMessage,
+      passwordMessage,
+      confirmPasswordMessage
     })
+
+    return !(emailMessage || nameMessage || passwordMessage || confirmPasswordMessage)
   }
 
   handleSubmit = (event) => {
     event.preventDefault()
-    this.validate()
+
+    if (this.isValid()) {
+      console.log('Do register')
+    }
   }
 
   render() {
