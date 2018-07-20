@@ -1,6 +1,9 @@
 import React from 'react'
 
+import { withRouter } from 'react-router-dom'
 import { auth, provider } from '../firebase'
+
+import * as routes from '../constants/routes'
 
 import SignUpForm from '../components/SignUpForm'
 
@@ -14,14 +17,6 @@ class SignUpPage extends React.Component {
     }
 
     this.state = { ...this.INITIAL_STATE }
-  }
-
-  componentDidMount() {
-    auth.onAuthStateChanged((user) => {
-      if (user) {
-        this.setState({ user })
-      }
-    })
   }
 
   login = () => {
@@ -46,10 +41,11 @@ class SignUpPage extends React.Component {
   onSubmit = (data) => {
     auth.createUserWithEmailAndPassword(data.email, data.password)
       .then(authUser => {
-        this.setState({...this.INITIAL_STATE})
+        this.setState({ ...this.INITIAL_STATE })
+        this.props.history.push(routes.HOME)
       })
       .catch(error => {
-        this.setState({errorSignIn: error})
+        this.setState({ errorSignIn: error })
       })
   }
 
@@ -63,10 +59,10 @@ class SignUpPage extends React.Component {
             : <button onClick={this.login}>Log In</button>
           }
         </div>
-        <SignUpForm onSubmit={this.onSubmit}/>
+        <SignUpForm onSubmit={this.onSubmit} history={this.props.history} />
       </div>
     )
   }
 }
 
-export default SignUpPage
+export default withRouter(SignUpPage)

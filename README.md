@@ -54,8 +54,8 @@ npm start
 - [ทำ Routing ให้กับ React ด้วย React Router v4](https://devahoy.com/posts/basic-web-with-react-router-v4/) (+ Setup ESLint and Bulma)
 
 ## Firebase
-- [Firebase & React Part 2: User Authentication](https://css-tricks.com/firebase-react-part-2-user-authentication/)
 - [A Complete Firebase in React Authentication Tutorial [2018]](https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial/)
+- [Firebase & React Part 2: User Authentication](https://css-tricks.com/firebase-react-part-2-user-authentication/)
 
 ## Travis
 - [Learn Travis](https://github.com/dwyl/learn-travis)
