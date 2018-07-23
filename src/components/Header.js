@@ -18,6 +18,7 @@ class Header extends React.Component {
 
   handleSignOut = () => {
     auth.signOut()
+    console.log('signout')
   }
 
   render() {
@@ -58,8 +59,8 @@ class Header extends React.Component {
 const NavBarEndNonAuth = () =>
   <div className="navbar-item">
     <NavLink exact to={routes.LANDING} activeClassName="is-active" className="navbar-item">Landing</NavLink>
-    <NavLink to="/signin" activeClassName="is-active" className="navbar-item">Sign In</NavLink>
-    <NavLink to="/signup" className="button is-info is-outlined is-hovered">Sign up</NavLink>
+    <NavLink to={routes.SIGN_IN} activeClassName="is-active" className="navbar-item">Sign In</NavLink>
+    <NavLink to={routes.SIGN_UP} className="button is-info is-outlined is-hovered">Sign up</NavLink>
   </div>
 
 const NavBarEndAuth = () =>
