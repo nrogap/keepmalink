@@ -1,5 +1,5 @@
 import React from 'react'
-import { withRouter } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
 
 import { auth, provider } from '../firebase'
 
@@ -13,7 +13,7 @@ class SignUpPage extends React.Component {
 
     this.INITIAL_STATE = {
       user: null,
-      errorSignIn: null
+      error: null
     }
 
     this.state = { ...this.INITIAL_STATE }
@@ -45,7 +45,7 @@ class SignUpPage extends React.Component {
         this.props.history.push(routes.HOME)
       })
       .catch(error => {
-        this.setState({ errorSignIn: error })
+        this.setState(() => ({ error }))
       })
   }
 
@@ -65,5 +65,12 @@ class SignUpPage extends React.Component {
     )
   }
 }
+
+export const SignUpLink = () =>
+  <p>
+    Don't have an account?
+    {' '}
+    <Link to={routes.SIGN_UP}>Sign Up</Link>
+  </p>
 
 export default withRouter(SignUpPage)

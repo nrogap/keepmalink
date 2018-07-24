@@ -1,11 +1,13 @@
 import React from 'react'
-import { Link, withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 
 import { auth } from '../firebase'
 
 import * as routes from '../constants/routes'
 
 import SignInForm from '../components/SignInForm'
+import { SignUpLink } from '../containers/SignUpPage'
+import { PasswordForgetLink } from '../containers/PasswordForgetPage'
 
 class SignInPage extends React.Component {
   constructor(props) {
@@ -13,7 +15,7 @@ class SignInPage extends React.Component {
 
     this.INITIAL_STATE = {
       user: null,
-      errorSignIn: null
+      error: null
     }
   }
   onSubmit = (data) => {
@@ -23,7 +25,7 @@ class SignInPage extends React.Component {
         this.props.history.push(routes.HOME)
       })
       .catch(error => {
-        this.setState({ errorSignIn: error })
+        this.setState(() => ({ error }))
       })
   }
 
@@ -33,16 +35,10 @@ class SignInPage extends React.Component {
         Sign In
         <SignInForm onSubmit={this.onSubmit} />
         <SignUpLink />
+        <PasswordForgetLink />
       </div>
     )
   }
 }
-
-const SignUpLink = () =>
-  <p>
-    Don't have an account?
-    {' '}
-    <Link to={routes.SIGN_UP}>Sign Up</Link>
-  </p>
 
 export default withRouter(SignInPage)
