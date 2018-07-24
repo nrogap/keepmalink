@@ -3,6 +3,8 @@ import { Route, Switch } from 'react-router-dom'
 
 import { auth } from '../firebase'
 
+import withAuthentication from './withAuthentication'
+
 import Header from './Header'
 import Footer from './Footer'
 
@@ -35,7 +37,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Header authUser={this.state.authUser} />
+        <Header/>
         <div className="container">
           <Switch>
             <Route exact path={routes.LANDING} component={LandingPage} />
@@ -52,4 +54,4 @@ class App extends React.Component {
   }
 }
 
-export default App
+export default withAuthentication(App)

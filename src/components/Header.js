@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom'
 
 import { auth } from '../firebase'
 
+import AuthUserContext from './AuthUserContext'
+
 import * as routes from '../constants/routes'
 
 class Header extends React.Component {
@@ -64,10 +66,12 @@ class Header extends React.Component {
               id="mainNav"
             >
               <div className="navbar-end">
-                {this.props.authUser
-                  ? this.renderNavBarEndAuth()
-                  : this.renderNavBarEndNonAuth()
-                }
+                <AuthUserContext.Consumer>
+                  {authUser => authUser
+                    ? this.renderNavBarEndAuth()
+                    : this.renderNavBarEndNonAuth()
+                  }
+                </AuthUserContext.Consumer>
               </div>
             </div>
           </div>
