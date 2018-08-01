@@ -38,6 +38,11 @@ npm start
 
 ## React
 - [Presentational and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)
+- [React’s Component Lifecycle](https://itnext.io/reacts-component-lifecycle-6c13e09d10ad)
+- [How to Work with Forms, Inputs and Events in React](https://medium.com/capital-one-developers/how-to-work-with-forms-inputs-and-events-in-react-c337171b923b)
+- [มารู้จักกับ Context API ของ React กัน](https://medium.com/takemetour-engineering/%E0%B8%A1%E0%B8%B2%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%81%E0%B8%B1%E0%B8%9A-context-api-%E0%B8%82%E0%B8%AD%E0%B8%87-react-%E0%B8%81%E0%B8%B1%E0%B8%99-997e5c3c34fc)
+- [3 Ways to Create React Components](https://medium.com/@the.benhawy/3-ways-to-create-react-components-8b3620e4ea0)
+- [Using a function in `setState` instead of an object](https://medium.com/@wisecobbler/using-a-function-in-setstate-instead-of-an-object-1f5cfd6e55d1)
 
 ## Setup Project
 - [Using React in VS Code](https://code.visualstudio.com/docs/nodejs/reactjs-tutorial)
@@ -53,6 +58,7 @@ npm start
 
 ## Firebase
 - [A Complete Firebase in React Authentication Tutorial [2018]](https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial/)
+- [Firebase & React Part 2: User Authentication](https://css-tricks.com/firebase-react-part-2-user-authentication/)
 
 ## Travis
 - [Learn Travis](https://github.com/dwyl/learn-travis)

@@ -1,6 +1,13 @@
 import React from 'react'
 
-class SignupPage extends React.Component {
+import {
+  validateEmail,
+  validateName,
+  validatePasswordSignUp,
+  validateConfirmPassword
+} from '../helpers/validator'
+
+class SignUpForm extends React.Component {
   state = {
     email: '',
     name: '',
@@ -21,34 +28,18 @@ class SignupPage extends React.Component {
     })
   }
 
-  validate() {
+  isValid() {
     const {
       email,
       name,
       password,
       confirmPassword
     } = this.state
-    const regexEmail = /^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})/
-    let emailMessage = null
-    if (!email.match(regexEmail)) {
-      emailMessage = 'Please enter a valid email address'
-    }
 
-    const regexName = /[A-z0-9 ]{3,50}$/
-    let nameMessage = null
-    if (!name.match(regexName)) {
-      nameMessage = 'Can only contain letters and numbers'
-    }
-
-    let passwordMessage = null
-    if (password.length < 8) {
-      passwordMessage = 'Use 8 characters or mores'
-    }
-
-    let confirmPasswordMessage = null
-    if (confirmPassword !== password) {
-      confirmPasswordMessage = 'does not match the password'
-    }
+    const emailMessage = validateEmail(email)
+    const nameMessage = validateName(name)
+    const passwordMessage = validatePasswordSignUp(password)
+    const confirmPasswordMessage = validateConfirmPassword(password, confirmPassword)
 
     this.setState({
       emailMessage,
@@ -56,13 +47,26 @@ class SignupPage extends React.Component {
       passwordMessage,
       confirmPasswordMessage
     })
+
+    return !(emailMessage || nameMessage || passwordMessage || confirmPasswordMessage)
   }
 
-  // length is 3-50 characters
   handleSubmit = (event) => {
     event.preventDefault()
 
-    this.validate()
+    if (this.isValid()) {
+      const {
+        email,
+        name,
+        password
+      } = this.state
+
+      this.props.onSubmit({
+        email,
+        name,
+        password
+      })
+    }
   }
 
   render() {
@@ -70,11 +74,15 @@ class SignupPage extends React.Component {
       emailMessage,
       nameMessage,
       passwordMessage,
-      confirmPasswordMessage
+      confirmPasswordMessage,
+      email,
+      name,
+      password,
+      confirmPassword
     } = this.state
 
     return (
-      <div className="SignupPage">
+      <div className="SignUpForm">
         <form onSubmit={this.handleSubmit}>
           <div className="field">
             <label className="label">Email</label>
@@ -84,6 +92,7 @@ class SignupPage extends React.Component {
                 id="email"
                 type="email"
                 autoComplete="email"
+                value={email}
                 onChange={this.handleChange} />
               <span className="icon is-small is-left">
                 <i className="fas fa-envelope"></i>
@@ -96,13 +105,14 @@ class SignupPage extends React.Component {
           </div>
 
           <div className="field">
-            <label className="label">Name</label>
+            <label className="label">Display Name</label>
             <div className="control has-icons-left has-icons-right">
               <input
                 className={`input ${nameMessage ? 'is-danger' : ''}`}
                 id="name"
                 type="text"
                 autoComplete="name"
+                value={name}
                 onChange={this.handleChange} />
               <span className="icon is-small is-left">
                 <i className="fas fa-user"></i>
@@ -122,6 +132,7 @@ class SignupPage extends React.Component {
                 id="password"
                 type="password"
                 autoComplete="new-password"
+                value={password}
                 onChange={this.handleChange} />
               <span className="icon is-small is-left">
                 <i className="fas fa-key"></i>
@@ -141,6 +152,7 @@ class SignupPage extends React.Component {
                 id="confirmPassword"
                 type="password"
                 autoComplete="new-password"
+                value={confirmPassword}
                 onChange={this.handleChange} />
               <span className="icon is-small is-left">
                 <i className="fas fa-key"></i>
@@ -154,7 +166,7 @@ class SignupPage extends React.Component {
 
           <div className="field is-grouped">
             <div className="control">
-              <button className="button is-link" type="submit">Submit</button>
+              <button className="button is-link" type="submit">Register</button>
             </div>
           </div>
         </form>
@@ -163,4 +175,4 @@ class SignupPage extends React.Component {
   }
 }
 
-export default SignupPage
+export default SignUpForm
