@@ -26,7 +26,7 @@ export class PasswordForgetForm extends Component {
   onSubmit = (event) => {
     const { email } = this.state
 
-    auth.doPasswordReset(email)
+    auth.sendPasswordResetEmail(email)
       .then(() => {
         this.setState(() => ({ ...INITIAL_STATE }))
       })
