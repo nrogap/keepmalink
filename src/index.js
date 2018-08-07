@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom'
 
 import 'bulma/css/bulma.css'
 
-import App from './components/App'
+import App from './containers/App'
 
 const AppWithRouter = () => (
   <BrowserRouter>

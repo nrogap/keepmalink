@@ -3,17 +3,17 @@ import { Route, Switch } from 'react-router-dom'
 
 import { auth } from '../firebase'
 
-import withAuthentication from './withAuthentication'
+import withAuthentication from '../components/withAuthentication'
 
-import Header from './Header'
-import Footer from './Footer'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
-import AccountPage from '../containers/AccountPage'
-import HomePage from '../containers/HomePage'
-import LandingPage from '../containers/LandingPage'
-import PasswordForgetPage from '../containers/PasswordForgetPage'
-import SignInPage from '../containers/SignInPage'
-import SignUpPage from '../containers/SignUpPage'
+import AccountPage from './AccountPage'
+import HomePage from './HomePage'
+import LandingPage from './LandingPage'
+import PasswordForgetPage from './PasswordForgetPage'
+import SignInPage from './SignInPage'
+import SignUpPage from './SignUpPage'
 
 import * as routes from '../constants/routes'
 
